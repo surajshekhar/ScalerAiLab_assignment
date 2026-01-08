@@ -1,6 +1,6 @@
 -- Insert default user
-INSERT INTO users (name, email) VALUES 
-('Suraj', 'suraj@gmail.com');
+INSERT INTO users (name, email, password) VALUES 
+('Suraj', 'suraj@gmail.com', '$2a$10$YourHashedPasswordHere');
 
 -- Insert categories
 INSERT INTO categories (name) VALUES 
