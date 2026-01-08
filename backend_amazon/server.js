@@ -11,6 +11,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   'https://amazon-clone-assignment.vercel.app',
+  'https://scaler-ai-lab-assignment-8ero.vercel.app',
   process.env.FRONTEND_URL
 ].filter(Boolean);
 
