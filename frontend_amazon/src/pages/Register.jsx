@@ -37,7 +37,8 @@ function Register({ onLogin }) {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+      const response = await axios.post(`${API_URL}/auth/register`, {
         name: formData.name,
         email: formData.email,
         password: formData.password
@@ -45,7 +46,7 @@ function Register({ onLogin }) {
 
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
-      
+
       onLogin(response.data.user);
       navigate('/');
     } catch (err) {
